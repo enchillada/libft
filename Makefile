@@ -84,14 +84,14 @@ SRCFILES	=		ft_atoi.c		\
 				ft_wordlen.c		\
 				get_next_line.c
 
-CC		=	gcc
 NAME		=	libft.a
+HEAD		= 	libft.h
+CC		=	gcc
 FLAGS		=	-Wall -Werror -Wextra
 SRCDIR		:=	srcs
 SRC		:=	$(addprefix $(SRCDIR)/, $(SRCFILES))
 OBJDIR		:=	obj
 OBJS		:=	$(addprefix $(OBJDIR)/, $(patsubst %.c,%.o,$(SRCFILES)))
-HEAD		= 	libft.h
 
 all: $(NAME)
 
