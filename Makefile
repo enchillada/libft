@@ -10,16 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: clean fclean 
+
 SRCFILES	=	ft_atoi.c			\
 				ft_bzero.c			\
 				ft_findwordc.c		\
 				ft_intlen.c			\
-				ft_isalnum.c			\
+				ft_isalnum.c		\
 				ft_isalpha.c		\
 				ft_isascii.c		\
 				ft_isblank.c		\
 				ft_iscntrl.c		\
-				ft_isdigit.c			\
+				ft_isdigit.c		\
 				ft_isprint.c		\
 				ft_ispunct.c		\
 				ft_isspace.c		\
@@ -43,7 +45,7 @@ SRCFILES	=	ft_atoi.c			\
 				ft_memmove.c		\
 				ft_memset.c			\
 				ft_printlist.c		\
-				ft_putchar.c			\
+				ft_putchar.c		\
 				ft_putchar_fd.c		\
 				ft_putendl.c		\
 				ft_putendl_fd.c		\
@@ -62,22 +64,22 @@ SRCFILES	=	ft_atoi.c			\
 				ft_striter.c		\
 				ft_striteri.c		\
 				ft_strjoin.c		\
-				ft_strlcat.c			\
+				ft_strlcat.c		\
 				ft_strlen.c			\
 				ft_strmap.c			\
 				ft_strmapi.c		\
 				ft_strncat.c		\
-				ft_strncmp.c			\
+				ft_strncmp.c		\
 				ft_strncpy.c		\
 				ft_strnequ.c		\
 				ft_strnew.c			\
 				ft_strnstr.c		\
-				ft_strrchr.c			\
+				ft_strrchr.c		\
 				ft_strsplit.c		\
 				ft_strstr.c			\
 				ft_strsub.c			\
 				ft_strtrim.c		\
-				ft_tolower.c			\
+				ft_tolower.c		\
 				ft_toupper.c		\
 				ft_wordlen.c		\
 				get_next_line.c
@@ -97,6 +99,7 @@ $(OBJS): $(SRC) | $(OBJDIR)
 
 $(OBJDIR)/%.o : $(SRCDIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
+
 $(OBJDIR):
 	@mkdir $(OBJDIR)
 
@@ -118,5 +121,3 @@ fclean:
 	@echo "*         REMOVING $(NAME)         *"
 
 re:  fclean all
-
-.PHONY: clean fclean
